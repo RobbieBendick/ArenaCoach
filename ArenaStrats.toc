@@ -1,0 +1,16 @@
+## Interface: 30400
+## Author: Mageiden
+## Title: ArenaStrats
+## Notes: Strats for specific compositions.
+## DefaultState: enabled
+## SavedVariables: ArenaStratsDB
+
+embeds.xml
+ClassIcons.lua
+ViableComps.lua
+Deathknight.lua
+Druid.lua
+Mage.lua
+Hunter.lua
+ArenaStrats.lua
+Config.lua
