@@ -1,8 +1,8 @@
 local _, core = ...;
 
-local DEATHKNIGHT_STRATS = {
+local WARRIOR_STRATS = {
     ["2v2"] = {
-        ["ret_deathknight"] = {
+        ["warrior_holypaladin"] = {
             ["warrior_holypaladin"] = {
                 summary = "",
                 tips = {
@@ -45,20 +45,17 @@ local DEATHKNIGHT_STRATS = {
                 tips = {}
             }
         },
-        ['deathknight_holypaladin'] = {
+        ['warrior_discpriest'] = {
             ["warrior_holypaladin"] = {
-                summary = "Scatter/Trap Paladin into fear while killing Warrior.",
-                    tips = {
-                        "Save [Snake Trap] for Warrior right before you go for a Scatter/Trap on Paladin.",
-                        "When Paladin is CC'd, purge Sacred Shield off the Warrior."
-                    }
+                summary = "",
+                tips = {}
             },
             ["rogue_discpriest"] = {
-                summary = "Scatter/Trap Priest into fear while killing Rogue.",
+                summary = "",
                 tips = {}
             },
             ["rogue_shadowpriest"] = {
-                summary = "Scatter/Trap Priest into fear while killing Rogue.",
+                summary = "",
                 tips = {}
             },
             ["ret_hunter"] = {
@@ -78,9 +75,8 @@ local DEATHKNIGHT_STRATS = {
                 tips = {}
             },
             ["ret_deathknight"] = {
-                summary = "asdasd",
+                summary = "",
                 tips = {
-                    "asdasd"
                 }
             },
             ["hunter_discpriest"] = {
@@ -95,12 +91,16 @@ local DEATHKNIGHT_STRATS = {
     }
 }; 
 
-local DEATHKNIGHT_COMPS = {
+local WARRIOR_COMPS = {
     ["2v2"] = {
-        ["ret_deathknight"] = "Ret/Deathknight",
-        ["deathknight_holypaladin"] = "Deathknight/Holy Paladin",
+        ["warrior_holypaladin"] = "Warrior/Holy Paladin",
+        ["warrior_discpriest"] = "Warrior/Disc Priest",
+    },
+    ["3v3"] = {
+        ["warrior_eleshaman_holypaladin"] = "Warrior/Ele Shaman/Holy Paladin",
+        ["warrior_deathknight_holypaladin"] = "Warrior/Deathknight/Holy Paladin"
     }
 }
 
-core.DEATHKNIGHT_COMPS = DEATHKNIGHT_COMPS;
-core.DEATHKNIGHT_STRATS = DEATHKNIGHT_STRATS;
+core.WARRIOR_COMPS = WARRIOR_COMPS;
+core.WARRIOR_STRATS = WARRIOR_STRATS;
