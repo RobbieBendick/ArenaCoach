@@ -7,6 +7,38 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -15,31 +47,27 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
-                summary = "",
-                tips = {}
-            },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }
@@ -49,6 +77,38 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -57,31 +117,27 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
-                summary = "",
-                tips = {}
-            },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }
@@ -91,6 +147,38 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -99,31 +187,27 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
-                summary = "",
-                tips = {}
-            },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }
@@ -133,6 +217,38 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -141,31 +257,27 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
-                summary = "",
-                tips = {}
-            },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }
@@ -175,6 +287,38 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -183,31 +327,27 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
-                summary = "",
-                tips = {}
-            },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }
@@ -217,6 +357,38 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -225,15 +397,37 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            }
+        },
+        ["ret_hunter"] = {
+            ["warrior_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest"] = {
                 summary = "",
                 tips = {}
             },
@@ -241,7 +435,23 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
             ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
                 summary = "",
                 tips = {}
             },
@@ -249,7 +459,35 @@ local PALADIN_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["mage_shadowpriest"] = {
+            ["rogue_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }

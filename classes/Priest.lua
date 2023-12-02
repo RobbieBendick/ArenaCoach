@@ -12,19 +12,20 @@ local PRIEST_STRATS = {
                     "Don't waste too much of your mana on damage while Paladin is on DR, unless there's a potential in killing."
                 }
             },
-            ["rogue_discpriest"] = {
-                summary = "You should be VERY defensive. Whoever they are on should just run away until their cooldowns are down.",
+            ["mage_shadowpriest"] = {
+                summary = "Spam purge and kill the mage while CCing the priest.",
                 tips = {
-                    "When the Rogue opens, the Shadow Priest should trinket and fear the rogue while the Mage CS/nova's the priest into a sheep. At this pont the Mage can deep freeze the Rogue's trinket on the fear.",
-                    "Try not to disperse while stunned, you need it to run away!",
+                    "While the Priest goes into range of the enemy Mage to purge, work together to stop the sheeps!",
+                    "As the Mage, if you counterspell the enemy mage's polymorph, then you should run towards the priest to deep/sheep him during the Mage's lockout.",
                 }
             },
-            ["rogue_shadowpriest"] = {
-                summary = "You should be VERY defensive. Whoever they are on should just run away until their cooldowns are down.",
-                tips = {
-                    "When the Rogue opens, the Shadow Priest should trinket and fear the rogue while the Mage CS/nova's the priest into a sheep. At this pont the Mage can deep freeze the Rogue's trinket on the fear.",
-                    "Try not to disperse while stunned, you need it to run away!",
-                }
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {},
             },
             ["ret_restoshaman"] = {
                 summary = "Play ontop of the Shaman so double fears are easy to land. Once doubled feared, dot the Ret while he's feared and sheep Shaman off of the fear, and silence (and/or) horrify the ret paladin while killing him.",
@@ -38,11 +39,11 @@ local PRIEST_STRATS = {
                     "Cross CC is key! Try not to waste CC until both of the enemy players are able to be CC'd at the same time."
                 }
             },
-            ["feral_discpriest"] = {
+            ["ret_deathknight"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["ret_hunter"] = {
                 summary = "",
                 tips = {}
             },
@@ -50,33 +51,55 @@ local PRIEST_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["mage_shadowpriest"] = {
-                summary = "Spam purge and kill the mage while CCing the priest.",
+            ["rogue_discpriest"] = {
+                summary = "You should be VERY defensive. Whoever they are on should just run away until their cooldowns are down.",
                 tips = {
-                    "While the Priest goes into range of the enemy Mage to purge, work together to stop the sheeps!",
-                    "As the Mage, if you counterspell the enemy mage's polymorph, then you should run towards the priest to deep/sheep him during the Mage's lockout.",
+                    "When the Rogue opens, the Shadow Priest should trinket and fear the rogue while the Mage CS/nova's the priest into a sheep. At this pont the Mage can deep freeze the Rogue's trinket on the fear.",
+                    "Try not to disperse while stunned, you need it to run away!",
                 }
             },
-            ["mage_rogue"] = {
-                summary = "",
-                tips = {},
+            ["rogue_shadowpriest"] = {
+                summary = "You should be VERY defensive. Whoever they are on should just run away until their cooldowns are down.",
+                tips = {
+                    "When the Rogue opens, the Shadow Priest should trinket and fear the rogue while the Mage CS/nova's the priest into a sheep. At this pont the Mage can deep freeze the Rogue's trinket on the fear.",
+                    "Try not to disperse while stunned, you need it to run away!",
+                }
             },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            }
         },
         ["mage_discpriest"] = {
             ["warrior_holypaladin"] = {
                 summary = "",
-                tips = {    }
+                tips = {}
             },
-            ["rogue_discpriest"] = {
+            ["mage_shadowpriest"] = {
                 summary = "",
                 tips = {}
             },
-            ["rogue_shadowpriest"] = {
+            ["feral_discpriest"] = {
                 summary = "",
-                tips = {
-                }
+                tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["mage_rogue"] = {
                 summary = "",
                 tips = {}
             },
@@ -84,7 +107,7 @@ local PRIEST_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["ret_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
@@ -92,24 +115,84 @@ local PRIEST_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
             ["hunter_discpriest"] = {
                 summary = "",
                 tips = {}
             },
-            ["mage_shadowpriest"] = {
+            ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
             },
-            ["mage_rogue"] = {
+            ["rogue_shadowpriest"] = {
                 summary = "",
-                tips = {},
+                tips = {}
             },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            }
         },
         ["rogue_discpriest"] = {
             ["warrior_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -118,40 +201,68 @@ local PRIEST_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
-            },
-            ["mage_rogue"] = {
-                summary = "",
-                tips = {},
-            },
+            }
         },
         ["rogue_shadowpriest"] = {
             ["warrior_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
             ["rogue_discpriest"] = {
                 summary = "",
                 tips = {}
@@ -160,34 +271,30 @@ local PRIEST_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
-            },
-            ["mage_rogue"] = {
-                summary = "",
-                tips = {},
-            },
+            }
         },
     };
 };
