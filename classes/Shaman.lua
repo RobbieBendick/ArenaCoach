@@ -72,7 +72,7 @@ local SHAMAN_STRATS = {
                 tips = {}
             }
         },
-        ['warlock_restosham'] = {
+        ['warlock_restoshaman'] = {
             ["warrior_holypaladin"] = {
                 summary = "",
                 tips = {}
@@ -438,7 +438,7 @@ local SHAMAN_STRATS = {
 local SHAMAN_COMPS = {
     ["2v2"] = {
         ["warlock_eleshaman"] = "Warlock/Ele Shaman",
-        ["warlock_restosham"] = "Warlock/Resto Shaman",
+        ["warlock_restoshaman"] = "Warlock/Resto Shaman",
         ["eleshaman_holypaladin"] = "Ele Shaman/Holy Paladin",
         ["enhanceshaman_hunter"] = "Enhance Shaman/Hunter",
         ["enhanceshaman_ret"] = "Enhance Shaman/Ret",

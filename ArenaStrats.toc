@@ -6,7 +6,6 @@
 ## SavedVariables: ArenaStratsDB
 
 embeds.xml
-ClassIcons.lua
 ViableComps.lua
 classes/Deathknight.lua
 classes/Druid.lua

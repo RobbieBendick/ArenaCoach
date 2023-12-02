@@ -67,7 +67,8 @@ function CreateCustomConfigFrame()
 
     local vs_label = AceGUI:Create("Label")
     vs_label:SetText("vs");
-    vs_label:SetWidth(20)
+    vs_label:SetWidth(40);
+    vs_label:SetJustifyH("CENTER");
     f:AddChild(vs_label);
 
     local enemy_comp_dropdown = AceGUI:Create("Dropdown");
@@ -111,10 +112,12 @@ function CreateCustomConfigFrame()
         -- Check if there are any tips
         if #tips > 0 then
             formattedTips = "Tips:\n\n" .. formattedTips;
+        else
+            formattedTips = "Tips not yet provided.";
         end
     
         tips_text_label:SetText(formattedTips);
-        summary_text_label:SetText((summary ~= "" and "Summary:\n\n" or "") .. summary);
+        summary_text_label:SetText((summary ~= "" and "Summary:\n\n" or "Summary not yet provided.") .. summary);
     end
     function ResetDropdowns()
         player_comp_dropdown:SetValue(nil);
@@ -129,9 +132,9 @@ function CreateCustomConfigFrame()
 end
 
 -- Register slash command to open options
-SLASH_ARENASTRATS1 = "/arenastrats"
-SLASH_ARENASTRATS2 = "/as"
-SlashCmdList["ARENASTRATS"] = OpenMinimapConfig
+SLASH_ARENASTRATS1 = "/arenastrats";
+SLASH_ARENASTRATS2 = "/as";
+SlashCmdList["ARENASTRATS"] = OpenMinimapConfig;
 
 -- Register Minimap Icon
 LibDBIcon:Register(addon_name, {
@@ -143,4 +146,4 @@ LibDBIcon:Register(addon_name, {
     end,
     text = addon_name,
     iconCoords = {0.05, 0.95, 0.05, 0.95},
-})
+});
