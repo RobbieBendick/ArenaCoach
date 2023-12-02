@@ -13,7 +13,7 @@ local _, player_class = UnitClass("player");
 filter.bracket_filter = "2v2";
 filter.player_comp = "";
 filter.enemy_comp = "";
--- Function to open the minimap icon configuration
+
 function OpenMinimapConfig()
     if frame and frame:IsShown() then
         frame:Hide();
@@ -25,11 +25,8 @@ function OpenMinimapConfig()
     end
 end
 
-
-
--- Function to create the custom configuration frame
 function CreateCustomConfigFrame()
-    local frame_width, frame_height = 700, 300;
+    local frame_width, frame_height = 900, 420;
     local f = AceGUI:Create("Frame");
 
     f:SetTitle(addon_name);
@@ -37,7 +34,6 @@ function CreateCustomConfigFrame()
     f:SetWidth(frame_width);
     f:SetHeight(frame_height);
 
-    -- Arena Bracket Dropdown
     local bracket_dropdown = AceGUI:Create("Dropdown");
     bracket_dropdown:SetLabel("Bracket");
     bracket_dropdown:SetList({
@@ -53,7 +49,6 @@ function CreateCustomConfigFrame()
     bracket_dropdown:SetValue("2v2");
     f:AddChild(bracket_dropdown);
 
-    -- Class Combination Dropdowns
     local player_comp_dropdown = AceGUI:Create("Dropdown");
     player_comp_dropdown:SetLabel("Your Comp");
     local viablePlayerComps = core[player_class.."_COMPS"][filter.bracket_filter] or {};
@@ -88,7 +83,7 @@ function CreateCustomConfigFrame()
         player_comp_dropdown:SetList(classCombinations);
     end
 
-    -- SimpleGroup for horizontal layout
+    -- horizontal layout
     local horizontal_group = AceGUI:Create("SimpleGroup");
     horizontal_group:SetLayout("Flow");
     horizontal_group:SetWidth(frame_width - 20);
@@ -96,11 +91,8 @@ function CreateCustomConfigFrame()
     local summary_text_label = AceGUI:Create("Label");
     horizontal_group:AddChild(summary_text_label);
 
-    local spacer = AceGUI:Create("Label");
-    spacer:SetWidth(20);
-    
-
     local tips_text_label = AceGUI:Create("Label");
+
     horizontal_group:AddChild(tips_text_label);
     f:AddChild(horizontal_group);
 
@@ -109,19 +101,19 @@ function CreateCustomConfigFrame()
         local summary = core[player_class .. "_STRATS"][filter.bracket_filter][filter.player_comp][filter.enemy_comp].summary or "";
         local tips = core[player_class .. "_STRATS"][filter.bracket_filter][filter.player_comp][filter.enemy_comp].tips or {};
         local formattedTips = "";
+        local coloredTipsTitle, coloredSummaryTitle = "|cff33ff99Tips|r\n\n", "|cff33ff99Summary|r\n\n";
         for i, tip in ipairs(tips) do
-            formattedTips = formattedTips .. "Tip " .. i .. ": " .. tip .. "\n";
+            formattedTips = formattedTips .. "Tip " .. i .. ": " .. tip .. "\n\n";
         end
     
-        -- Check if there are any tips
         if #tips > 0 then
-            formattedTips = "Tips:\n\n" .. formattedTips;
+            formattedTips = coloredTipsTitle .. formattedTips;
         else
-            formattedTips = "Tips not yet provided.";
+            formattedTips = coloredTipsTitle .. "Tips not yet provided.";
         end
     
         tips_text_label:SetText(formattedTips);
-        summary_text_label:SetText((summary ~= "" and "Summary:\n\n" or "Summary not yet provided.") .. summary);
+        summary_text_label:SetText((summary ~= "" and "|cff33ff99Summary|r\n\n" or coloredSummaryTitle .. "Summary not yet provided.") .. summary);
     end
     function ResetDropdowns()
         player_comp_dropdown:SetValue(nil);
@@ -135,12 +127,12 @@ function CreateCustomConfigFrame()
     return f;
 end
 
--- Register slash command to open options
+-- register slash command to open options
 SLASH_ARENASTRATS1 = "/arenastrats";
 SLASH_ARENASTRATS2 = "/as";
 SlashCmdList["ARENASTRATS"] = OpenMinimapConfig;
 
--- Register Minimap Icon
+-- register minimap icon
 LibDBIcon:Register(addon_name, {
     icon = "Interface\\Icons\\Ability_Creature_Cursed_01",
     OnClick = OpenMinimapConfig,
