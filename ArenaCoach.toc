@@ -1,9 +1,9 @@
 ## Interface: 30400
 ## Author: Mageiden
-## Title: ArenaStrats
+## Title: ArenaCoach
 ## Notes: Strats for specific compositions.
 ## DefaultState: enabled
-## SavedVariables: ArenaStratsDB
+## SavedVariables: ArenaCoachDB
 
 embeds.xml
 ViableComps.lua
@@ -17,5 +17,5 @@ classes/Warlock.lua
 classes/Shaman.lua
 classes/Paladin.lua
 classes/Priest.lua
-ArenaStrats.lua
+ArenaCoach.lua
 Config.lua

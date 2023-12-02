@@ -3,7 +3,7 @@ local AceGUI = LibStub("AceGUI-3.0")
 local AceConfig = LibStub("AceConfig-3.0")
 local AceConfigDialog = LibStub("AceConfigDialog-3.0")
 local LibDBIcon = LibStub("LibDBIcon-1.0")
-local addon_name = "ArenaStrategies"
+local addon_name = "ArenaCoach"
 local frame;
 core.Config = {};
 Config = core.Config;
@@ -142,9 +142,9 @@ end
 
 
 -- register slash command to open options
-SLASH_ARENASTRATS1 = "/arenastrats";
-SLASH_ARENASTRATS2 = "/as";
-SlashCmdList["ARENASTRATS"] = OpenMinimapConfig;
+SLASH_ARENACOACH1 = "/arenacoach";
+SLASH_ARENACOACH2 = "/ac";
+SlashCmdList["ARENACOACH"] = OpenMinimapConfig;
 
 -- register minimap icon
 LibDBIcon:Register(addon_name, {
