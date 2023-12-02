@@ -72,7 +72,7 @@ local DEATHKNIGHT_STRATS = {
                 tips = {}
             }
         },
-        ['deathknight_holypaladin'] = {
+        ["deathknight_holypaladin"] = {
             ["warrior_holypaladin"] = {
                 summary = "",
                 tips = {}

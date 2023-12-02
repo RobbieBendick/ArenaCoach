@@ -72,75 +72,59 @@ local WARRIOR_STRATS = {
                 tips = {}
             }
         },
-        ['warrior_discpriest'] = {
-            ["warrior_holypaladin"] = {
+    },
+    ["3v3"] = {
+        ["warrior_eleshaman_holypaladin"] = {
+            ["rogue_mage_discpriest"] = {
                 summary = "",
                 tips = {}
             },
-            ["mage_shadowpriest"] = {
+            ["ret_hunter_discpriest"] = { 
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["mage_shadowpriest_restoshaman"] = { 
                 summary = "",
                 tips = {}
             },
-            ["mage_rogue"] = {
+            ["feral_hunter_discpriest"] = { 
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warrior_eleshaman_holypaladin"] = { 
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman_holypaladin"] = { 
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+        },
+        ["warrior_deathknight_holypaladin"] = {
+            ["rogue_mage_discpriest"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["ret_hunter_discpriest"] = { 
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
+            ["mage_shadowpriest_restoshaman"] = { 
                 summary = "",
                 tips = {}
             },
-            ["rogue_discpriest"] = {
+            ["feral_hunter_discpriest"] = { 
                 summary = "",
                 tips = {}
             },
-            ["rogue_shadowpriest"] = {
+            ["warrior_eleshaman_holypaladin"] = { 
                 summary = "",
                 tips = {}
             },
-            ["deathknight_holypaladin"] = {
+            ["warlock_eleshaman_holypaladin"] = { 
                 summary = "",
                 tips = {}
             },
-            ["warlock_eleshaman"] = {
-                summary = "",
-                tips = {}
-            },
-            ["warlock_restoshaman"] = {
-                summary = "",
-                tips = {}
-            },
-            ["eleshaman_holypaladin"] = {
-                summary = "",
-                tips = {}
-            },
-            ["enhanceshaman_hunter"] = {
-                summary = "",
-                tips = {}
-            },
-            ["enhanceshaman_ret"] = {
-                summary = "",
-                tips = {}
-            }
         }
     }
 }; 
@@ -148,7 +132,6 @@ local WARRIOR_STRATS = {
 local WARRIOR_COMPS = {
     ["2v2"] = {
         ["warrior_holypaladin"] = "Warrior/Holy Paladin",
-        ["warrior_discpriest"] = "Warrior/Disc Priest",
     },
     ["3v3"] = {
         ["warrior_eleshaman_holypaladin"] = "Warrior/Ele Shaman/Holy Paladin",

@@ -27,18 +27,6 @@ local PRIEST_STRATS = {
                 summary = "",
                 tips = {},
             },
-            ["ret_restoshaman"] = {
-                summary = "Play ontop of the Shaman so double fears are easy to land. Once doubled feared, dot the Ret while he's feared and sheep Shaman off of the fear, and silence (and/or) horrify the ret paladin while killing him.",
-                tips = {
-                    "Cross CC is key! Try not to waste CC until both of the enemy players are able to be CC'd at the same time."
-                }
-            },
-            ["ret_discpriest"] = {
-                summary = "Play ontop of the Priest so double fears are easy to land. Once doubled feared, dot the Ret while he's feared and sheep the Priest off of the fear, and silence (and/or) horrify the ret paladin while killing him.",
-                tips = {
-                    "Cross CC is key! Try not to waste CC until both of the enemy players are able to be CC'd at the same time."
-                }
-            },
             ["ret_deathknight"] = {
                 summary = "",
                 tips = {}
@@ -82,6 +70,10 @@ local PRIEST_STRATS = {
                 tips = {}
             },
             ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            },
+            ['eleshaman_holypaladin'] = {
                 summary = "",
                 tips = {}
             }
@@ -296,7 +288,271 @@ local PRIEST_STRATS = {
                 tips = {}
             }
         },
-    };
+        ["hunter_discpriest"] = {
+            ["warrior_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            }
+        },
+        ["feral_discpriest"] = {
+            ["warrior_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            }
+        },
+        ["deathknight_discpriest"] = {
+            ["warrior_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            }
+        }
+    },
+    ["3v3"] = {
+        ["mage_shadowpriest_restoshaman"] = {
+            ["rogue_mage_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest_restoshaman"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["feral_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warrior_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+        },
+        ["rogue_mage_discpriest"] = {
+            ["rogue_mage_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest_restoshaman"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["feral_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warrior_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+        }
+    }
 };
 
 local PRIEST_COMPS = {
@@ -306,7 +562,6 @@ local PRIEST_COMPS = {
         ["rogue_discpriest"] = "Rogue/Disc Priest",
         ["rogue_shadowpriest"] = "Rogue/Shadow Priest",
         ["hunter_discpriest"] = "Hunter/Disc Priest",
-        ["ret_discpriest"] = "Ret/Disc Priest",
         ["feral_discpriest"] = "Feral/Disc Priest",
         ["deathknight_discpriest"] = "Deathknight/Disc Priest",
     },

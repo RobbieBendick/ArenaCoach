@@ -492,6 +492,86 @@ local PALADIN_STRATS = {
                 tips = {}
             }
         },
+    },
+    ["3v3"] = {
+        ["warrior_eleshaman_holypaladin"] = {
+            ["rogue_mage_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest_restoshaman"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["feral_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warrior_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+        },
+        ["warrior_deathknight_holypaladin"] = {
+            ["rogue_mage_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest_restoshaman"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["feral_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warrior_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+        },
+        ["ret_hunter_discpriest"] = {
+            ["rogue_mage_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest_restoshaman"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["feral_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warrior_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+        }
     }
 }; 
 
@@ -500,7 +580,6 @@ local PALADIN_COMPS = {
         ["warrior_holypaladin"] = "Warrior/Holy Paladin",
         ["deathknight_holypaladin"] = "Deathknight/Holy Paladin",
         ["eleshaman_holypaladin"] = "Ele Shaman/Holy Paladin",
-        ["ret_discpriest"] = "Ret/Disc Priest",
         ["ret_enhanceshaman"] = "Enhance Shaman/Ret",
         ["ret_deathknight"] = "Ret/Deathknight",
         ["ret_hunter"] = "Ret/Hunter",

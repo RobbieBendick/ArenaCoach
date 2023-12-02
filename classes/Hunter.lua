@@ -5,8 +5,39 @@ local HUNTER_STRATS = {
         ["ret_hunter"] = {
             ["warrior_holypaladin"] = {
                 summary = "",
-                tips = {
-                }
+                tips = {}
+            },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
             },
             ["rogue_discpriest"] = {
                 summary = "",
@@ -16,60 +47,37 @@ local HUNTER_STRATS = {
                 summary = "",
                 tips = {}
             },
-            ["ret_hunter"] = {
+            ["deathknight_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
+            ["warlock_eleshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_discpriest"] = {
+            ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
-            ["feral_discpriest"] = {
+            ["eleshaman_holypaladin"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_deathknight"] = {
+            ["enhanceshaman_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["hunter_discpriest"] = {
-                summary = "",
-                tips = {}
-            },
-            ["mage_shadowpriest"] = {
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }
         },
         ['hunter_discpriest'] = {
             ["warrior_holypaladin"] = {
-                summary = "Scatter/Trap Paladin into fear while killing Warrior.",
-                    tips = {
-                        "Save [Snake Trap] for Warrior right before you go for a Scatter/Trap on Paladin.",
-                        "When Paladin is CC'd, purge Sacred Shield off the Warrior."
-                    }
-            },
-            ["rogue_discpriest"] = {
-                summary = "Scatter/Trap Priest into fear while killing Rogue.",
-                tips = {}
-            },
-            ["rogue_shadowpriest"] = {
-                summary = "Scatter/Trap Priest into fear while killing Rogue.",
-                tips = {}
-            },
-            ["ret_hunter"] = {
                 summary = "",
                 tips = {}
             },
-            ["ret_restoshaman"] = {
-                summary = "",
-                tips = {}
-            },
-            ["ret_discpriest"] = {
+            ["mage_shadowpriest"] = {
                 summary = "",
                 tips = {}
             },
@@ -77,20 +85,90 @@ local HUNTER_STRATS = {
                 summary = "",
                 tips = {}
             },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
             ["ret_deathknight"] = {
-                summary = "asdasd",
-                tips = {
-                    "asdasd"
-                }
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
             },
             ["hunter_discpriest"] = {
                 summary = "",
                 tips = {}
             },
-            ["mage_shadowpriest"] = {
+            ["rogue_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
                 summary = "",
                 tips = {}
             }
+        }
+    },
+    ["3v3"] = {
+        ["ret_hunter_discpriest"] = {
+            ["rogue_mage_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest_restoshaman"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["feral_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warrior_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
         }
     }
 }; 
@@ -99,6 +177,9 @@ local HUNTER_COMPS = {
     ["2v2"] = {
         ["hunter_discpriest"] = "Hunter/Disc Priest",
         ["ret_hunter"] = "Hunter/Ret",
+    },
+    ["3v3"] = {
+        ["ret_hunter_discpriest"] = "Ret/Hunter/Disc Priest"
     }
 }
 

@@ -104,7 +104,6 @@ function CreateCustomConfigFrame()
         local summary = core[player_class .. "_STRATS"][filter.bracket_filter][filter.player_comp][filter.enemy_comp].summary or "";
         local tips = core[player_class .. "_STRATS"][filter.bracket_filter][filter.player_comp][filter.enemy_comp].tips or {};
         local formattedTips = "";
-
         for i, tip in ipairs(tips) do
             formattedTips = formattedTips .. "Tip " .. i .. ": " .. tip .. "\n";
         end

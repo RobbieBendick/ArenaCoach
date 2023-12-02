@@ -142,6 +142,34 @@ local WARLOCK_STRATS = {
                 tips = {}
             }
         }
+    },
+    ["3v3"] = {
+        ["warlock_eleshaman_holypaladin"] = {
+            ["rogue_mage_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest_restoshaman"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["feral_hunter_discpriest"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warrior_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman_holypaladin"] = { 
+                summary = "",
+                tips = {}
+            },
+        }
     }
 }; 
 
