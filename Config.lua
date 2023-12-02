@@ -13,6 +13,7 @@ local _, player_class = UnitClass("player");
 filter.bracket_filter = "2v2";
 filter.player_comp = "";
 filter.enemy_comp = "";
+local is_player_comp_empty, is_enemy_comp_empty = filter.player_comp == "", filter.enemy_comp;
 
 function OpenMinimapConfig()
     if frame and frame:IsShown() then
@@ -24,6 +25,7 @@ function OpenMinimapConfig()
         frame:Show();
     end
 end
+
 
 function CreateCustomConfigFrame()
     local frame_width, frame_height = 900, 420;
@@ -43,7 +45,7 @@ function CreateCustomConfigFrame()
     bracket_dropdown:SetWidth(72);
     bracket_dropdown:SetCallback("OnValueChanged", function(_, _, bracket)
         filter.bracket_filter = bracket;
-        UpdateClassDropdowns();
+        UpdatePlayerClassDropdowns();
         ResetDropdowns();
     end);
     bracket_dropdown:SetValue("2v2");
@@ -56,6 +58,7 @@ function CreateCustomConfigFrame()
     player_comp_dropdown:SetCallback("OnValueChanged", function(_, _, comp)
         filter.player_comp = comp;
         UpdateSummaryAndTipText();
+        UpdateUserHelperText();
     end);
     player_comp_dropdown:SetWidth(220);
     f:AddChild(player_comp_dropdown);
@@ -72,15 +75,16 @@ function CreateCustomConfigFrame()
     enemy_comp_dropdown:SetCallback("OnValueChanged", function(_, _, comp)
         filter.enemy_comp = comp;
         UpdateSummaryAndTipText();
+        UpdateUserHelperText();
     end);
     enemy_comp_dropdown:SetWidth(220);
     f:AddChild(enemy_comp_dropdown);
 
-    function UpdateClassDropdowns(selectedBracket)
-        local classCombinations = core[player_class.."_COMPS"][filter.bracket_filter];
+    function UpdatePlayerClassDropdowns(selectedBracket)
+        local playerClassCombinations = core[player_class.."_COMPS"][filter.bracket_filter];
         local viableEnemyComps = core.VIABLE_COMPS[filter.bracket_filter];
+        player_comp_dropdown:SetList(playerClassCombinations);
         enemy_comp_dropdown:SetList(viableEnemyComps);
-        player_comp_dropdown:SetList(classCombinations);
     end
 
     -- horizontal layout
@@ -89,6 +93,7 @@ function CreateCustomConfigFrame()
     horizontal_group:SetWidth(frame_width - 20);
 
     local summary_text_label = AceGUI:Create("Label");
+    summary_text_label:SetText("|cffff0000Please select your comp and an enemy comp.|r");
     horizontal_group:AddChild(summary_text_label);
 
     local tips_text_label = AceGUI:Create("Label");
@@ -97,7 +102,7 @@ function CreateCustomConfigFrame()
     f:AddChild(horizontal_group);
 
     function UpdateSummaryAndTipText()
-        if filter.enemy_comp == "" or filter.player_comp == "" then return end
+        if filter.player_comp == "" or filter.enemy_comp == "" then return end
         local summary = core[player_class .. "_STRATS"][filter.bracket_filter][filter.player_comp][filter.enemy_comp].summary or "";
         local tips = core[player_class .. "_STRATS"][filter.bracket_filter][filter.player_comp][filter.enemy_comp].tips or {};
         local formattedTips = "";
@@ -115,17 +120,26 @@ function CreateCustomConfigFrame()
         tips_text_label:SetText(formattedTips);
         summary_text_label:SetText((summary ~= "" and "|cff33ff99Summary|r\n\n" or coloredSummaryTitle .. "Summary not yet provided.") .. summary);
     end
+    function UpdateUserHelperText()
+        if filter.player_comp == "" then
+            summary_text_label:SetText("|cffff0000Please select your comp.|r");
+        elseif filter.enemy_comp == ""  then
+            summary_text_label:SetText("|cffff0000Please select an enemy comp.|r");
+        end
+    end
     function ResetDropdowns()
         player_comp_dropdown:SetValue(nil);
         enemy_comp_dropdown:SetValue(nil);
         filter.enemy_comp = "";
         filter.player_comp = "";
-        tips_text_label:SetText("");
-        summary_text_label:SetText("");
+        tips_text_label:SetText("Please select your comp and an enemy comp");
+        summary_text_label:SetText("Please select your comp and an enemy comp");
     end
 
     return f;
 end
+
+
 
 -- register slash command to open options
 SLASH_ARENASTRATS1 = "/arenastrats";
