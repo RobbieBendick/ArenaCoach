@@ -92,13 +92,17 @@ function CreateCustomConfigFrame()
     local horizontal_group = AceGUI:Create("SimpleGroup");
     horizontal_group:SetLayout("Flow");
     horizontal_group:SetWidth(frame_width - 20);
-    f:AddChild(horizontal_group);
 
     local summary_text_label = AceGUI:Create("Label");
     horizontal_group:AddChild(summary_text_label);
 
+    local spacer = AceGUI:Create("Label");
+    spacer:SetWidth(20);
+    
+
     local tips_text_label = AceGUI:Create("Label");
     horizontal_group:AddChild(tips_text_label);
+    f:AddChild(horizontal_group);
 
     function UpdateSummaryAndTipText()
         if filter.enemy_comp == "" or filter.player_comp == "" then return end

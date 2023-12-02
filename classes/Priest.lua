@@ -15,29 +15,47 @@ local PRIEST_STRATS = {
             ["mage_shadowpriest"] = {
                 summary = "Spam purge and kill the mage while CCing the priest.",
                 tips = {
-                    "While the Priest goes into range of the enemy Mage to purge, work together to stop the sheeps!",
-                    "As the Mage, if you counterspell the enemy mage's polymorph, then you should run towards the priest to deep/sheep him during the Mage's lockout.",
-                }
+                        "While the Priest goes into range of the enemy Mage to purge, work together to stop the sheeps! (Communicate who has the next Death/Counterspell etc.)",
+                        "As the Mage, if you counterspell the enemy mage's polymorph, then you should run towards the priest to deep/sheep him during the Mage's lockout.",
+                        "Silence the Mage while trying to sheep the Priest."
+                    }
             },
             ["feral_discpriest"] = {
-                summary = "",
-                tips = {}
+                summary = "CC Disc and kill Feral.",
+                tips = {
+                    "Play really defensive vs Berserk.",
+                    "If the Feral is on the Mage, then the Shadow Priest will have to start the CC chain with a fear",
+                    "If the Feral is on the Shadow Priest, the Mage can CS/Nova and sheep the Priest multiple times while the Shadow Priest runs over to fear off of it."
+                }
             },
             ["mage_rogue"] = {
-                summary = "",
-                tips = {},
+                summary = "Kill the Rouge usually.",
+                tips = {
+                    "Save disarm or disperse for Shadow Dance!",
+                    "Instantly trinket the cheap shot and fear the Rogue, and deep freeze him if he trinkets. (Optional Opener)",
+                    "They'll usually want to kill the Shadow Priest.",
+                },
             },
             ["ret_deathknight"] = {
-                summary = "",
-                tips = {}
+                summary = "Shadow Priest should play behind the Mage, so the Mage can CC them as they come in, and prolong them from hitting the Priest.",
+                tips = {
+                    "Work together to kill Tremor Totem and fear Shaman.",
+                    "Whoever they're on needs to play extremely defensive, which involves running away and staying as far away from them as possible at all times.",
+                    "If they decide to commit to the Mage, the Priest needs to come out from hiding.",
+                }
             },
             ["ret_hunter"] = {
-                summary = "",
-                tips = {}
+                summary = "CC Ret and kill hunter.",
+                tips = {
+                    "They usually want to kill the Mage in this matchup.",
+                    "Use deep freeze and disarm on hunter while the ret is CC'd",
+                }
             },
             ["hunter_discpriest"] = {
-                summary = "",
-                tips = {}
+                summary = "CC Priest and kill hunter.",
+                tips = {
+                    "Either fear or CS/Nova into sheep to start the CC chain onto the Priest."
+                }
             },
             ["rogue_discpriest"] = {
                 summary = "You should be VERY defensive. Whoever they are on should just run away until their cooldowns are down.",
@@ -49,33 +67,53 @@ local PRIEST_STRATS = {
             ["rogue_shadowpriest"] = {
                 summary = "You should be VERY defensive. Whoever they are on should just run away until their cooldowns are down.",
                 tips = {
-                    "When the Rogue opens, the Shadow Priest should trinket and fear the rogue while the Mage CS/nova's the priest into a sheep. At this pont the Mage can deep freeze the Rogue's trinket on the fear.",
+                    "When the Rogue opens, the Shadow Priest should trinket and fear the rogue while the Mage CS/nova's the priest into a sheep. At this point the Mage can deep freeze the Rogue's trinket on the fear.",
                     "Try not to disperse while stunned, you need it to run away!",
                 }
             },
+            ["ret_discpriest"] = {
+                summary = "asdsad",
+                tips = {"sdasd"},
+            },
             ["deathknight_holypaladin"] = {
-                summary = "",
-                tips = {}
+                summary = "Fear Paladin and Nova or Sheep DK, and dot Paladin up in the fear.",
+                tips = {
+                    "Deep freeze Paladin before he gets out of fear",
+                    "Play very defensive during gargoyle.",
+                }
             },
             ["warlock_eleshaman"] = {
-                summary = "",
-                tips = {}
+                summary = "Fear Shaman and dot him in the fear while you sheep the Warlock",
+                tips = {
+                    "If the Warlock has a Felhunter, then before sheeping the Warlock, cast a rank one Frostbolt and/or Cone of Cold for the junk buffs"
+                }
             },
             ["warlock_restoshaman"] = {
-                summary = "",
-                tips = {}
+                summary = "Fear Shaman and dot him in the fear while you sheep the Warlock",
+                tips = {
+                    "Deep freeze the Shaman before he comes out of fear.",
+                    "If the Warlock has a Felhunter, cast a rank one Frostbolt and/or Cone of Cold for the junk buffs before you sheep.",
+                }
             },
             ["enhanceshaman_hunter"] = {
-                summary = "",
-                tips = {}
+                summary = "Shadow Priest should play behind the Mage, so the Mage can CC them as they come in, and prolong them from hitting the Priest.",
+                tips = {
+                    "Work together to kill Tremor Totem and fear Shaman.",
+                    "Whoever they're on needs to play extremely defensive, which involves running away and staying as far away from them as possible at all times."
+                }
             },
             ["enhanceshaman_ret"] = {
-                summary = "",
-                tips = {}
+                summary = "Shadow Priest should play behind the Mage, so the Mage can CC them as they come in, and prolong them from hitting the Priest.",
+                tips = {
+                    "Work together to kill Tremor Totem and fear Shaman.",
+                    "Whoever they're on needs to play extremely defensive, which involves running away and staying as far away from them as possible at all times."
+                }
             },
             ['eleshaman_holypaladin'] = {
-                summary = "",
-                tips = {}
+                summary = "Fear Ele and dot him in the fear, while the Mage Nova/CS's Pally into a Sheep. Try to Deep Freeze ele before he gets out of the fear.",
+                tips = {
+                    "Cross CC is key. If they're not both CC'd at the time, it's easily counterable."
+                }
             }
         },
         ["mage_discpriest"] = {
