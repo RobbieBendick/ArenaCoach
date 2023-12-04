@@ -492,6 +492,76 @@ local PALADIN_STRATS = {
                 tips = {}
             }
         },
+        ["ret_enhanceshaman"] = {
+            ["warrior_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["feral_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["mage_rogue"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_deathknight"] = {
+                summary = "",
+                tips = {}
+            },
+            ["ret_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["hunter_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_discpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["rogue_shadowpriest"] = {
+                summary = "",
+                tips = {}
+            },
+            ["deathknight_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_eleshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["warlock_restoshaman"] = {
+                summary = "",
+                tips = {}
+            },
+            ["eleshaman_holypaladin"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_hunter"] = {
+                summary = "",
+                tips = {}
+            },
+            ["enhanceshaman_ret"] = {
+                summary = "",
+                tips = {}
+            }
+        }
     },
     ["3v3"] = {
         ["warrior_eleshaman_holypaladin"] = {
@@ -583,6 +653,7 @@ local PALADIN_COMPS = {
         ["ret_enhanceshaman"] = "Enhance Shaman/Ret",
         ["ret_deathknight"] = "Ret/Deathknight",
         ["ret_hunter"] = "Ret/Hunter",
+        ["ret_discpriest"] = "Ret/Disc"
     },
     ["3v3"] = {
         ["warrior_eleshaman_holypaladin"] = "Warrior/Ele Shaman/Holy Paladin",

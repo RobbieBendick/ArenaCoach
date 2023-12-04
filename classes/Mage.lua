@@ -295,6 +295,5 @@ local MAGE_COMPS = {
     }
 };
 
-
 core.MAGE_STRATS = MAGE_STRATS;
 core.MAGE_COMPS = MAGE_COMPS;

@@ -1,5 +1,8 @@
 local _, core = ...;
 
+local CLASSES = {
+    "DEATHKNIGHT", "DRUID", "HUNTER", "MAGE", "PALADIN", "PRIEST", "ROGUE", "SHAMAN", "WARLOCK", "WARRIOR"
+}
 local VIABLE_COMPS = {
     ["2v2"] = {
         ["warrior_holypaladin"] = "Warrior/Holy Paladin",
@@ -30,3 +33,4 @@ local VIABLE_COMPS = {
 };
 
 core.VIABLE_COMPS = VIABLE_COMPS;
+core.CLASSES = CLASSES;

@@ -7,6 +7,7 @@
 
 embeds.xml
 ViableComps.lua
+classes/Priest.lua
 classes/Deathknight.lua
 classes/Druid.lua
 classes/Mage.lua
@@ -16,6 +17,5 @@ classes/Rogue.lua
 classes/Warlock.lua
 classes/Shaman.lua
 classes/Paladin.lua
-classes/Priest.lua
 Config.lua
 ArenaCoach.lua
