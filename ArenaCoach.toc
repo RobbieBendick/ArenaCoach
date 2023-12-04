@@ -17,5 +17,5 @@ classes/Warlock.lua
 classes/Shaman.lua
 classes/Paladin.lua
 classes/Priest.lua
-ArenaCoach.lua
 Config.lua
+ArenaCoach.lua
