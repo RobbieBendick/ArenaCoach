@@ -6,6 +6,9 @@
 ## SavedVariables: ArenaCoachDB
 
 embeds.xml
+
+ArenaCoach.lua
+
 ViableComps.lua
 classes/Priest.lua
 classes/Deathknight.lua
@@ -17,5 +20,5 @@ classes/Rogue.lua
 classes/Warlock.lua
 classes/Shaman.lua
 classes/Paladin.lua
+AllStrats.lua
 Config.lua
-ArenaCoach.lua

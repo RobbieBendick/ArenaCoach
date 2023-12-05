@@ -112,49 +112,63 @@ local PRIEST_STRATS = {
             ['eleshaman_holypaladin'] = {
                 summary = "Fear Ele and dot him in the fear, while the Mage Nova/CS's Pally into a Sheep. Try to Deep Freeze ele before he gets out of the fear.",
                 tips = {
-                    "Cross CC is key. If they're not both CC'd at the time, it's easily counterable."
+                    "Cross CC is key or else they can get eachother out of CC. Be ontop of the shaman, but let the Mage Nova/CS before you fear. (Make sure to kill Tremor!)",
                 }
             }
         },
         ["mage_discpriest"] = {
             ["warrior_holypaladin"] = {
-                summary = "",
-                tips = {}
+                summary = "CC Paladin & kill Warrior.",
+                tips = {
+                    "If they survive offensive push and they're on DR, Mage will have to peel Warrior with rank one frostbolts and CoC while Priest runs around a pillar away from the Warrior."
+                }
             },
             ["mage_shadowpriest"] = {
-                summary = "",
+                summary = "CC Priest & purge/kill Mage.",
                 tips = {}
             },
             ["feral_discpriest"] = {
-                summary = "",
-                tips = {}
+                summary = "CC Priest & purge/kill Feral.",
+                tips = {
+                    "Nova/CS Priest into Sheep",
+                    "Save Deep Freeze for Feral",
+                }
             },
             ["mage_rogue"] = {
                 summary = "",
                 tips = {}
             },
             ["ret_discpriest"] = {
-                summary = "",
-                tips = {}
+                summary = "Double fear, purge Ret & rank one Frostbolt and then Sheep the Priest early in the fear, then go to the Paladin to cast damage on him before he gets out of the Fear, and then counterspell him to prolong the dispel on the Priest's sheep.",
+                tips = {
+                    "After purging Ret in the fear, the Priest should participate in the killing of the Ret by casting damage aswell."
+                }
             },
             ["ret_restoshaman"] = {
-                summary = "",
-                tips = {}
+                summary = "Double fear, purge Sacred Shield off Shaman while the mage Sheeps the Paladin off the fear and Deep Freezes the Shaman before he comes out of the Fear, and both casters should be casting damage on the Shaman.",
+                tips = {
+                    "Cross CC is key or else they can get eachother out of CC and ruin the whole setup."
+                }
             },
             ["ret_deathknight"] = {
-                summary = "",
-                tips = {}
+                summary = "Double fear to get Ret off the pillar, purge and kill Ret with sheep and/or nova on DK.",
+                tips = {
+                    "Running into fear is dangerous, but necessary. Get out of there ASAP after fearing!"
+                }
             },
             ["ret_hunter"] = {
-                summary = "",
-                tips = {}
+                summary = "CC Ret & kill hunter",
+                tips = {
+                    "Line of sight Aimed Shot as much as possible when Ret is out of CC.",
+                    "Blink to eat Priest's trap as long as it's not putting you in the middle of the map without Ice Block.",
+                }
             },
             ["hunter_discpriest"] = {
-                summary = "",
+                summary = "CC Priest & purge and kill hunter.",
                 tips = {}
             },
             ["rogue_discpriest"] = {
-                summary = "",
+                summary = "CC Priest & purge/dot and kill rogue.",
                 tips = {}
             },
             ["rogue_shadowpriest"] = {
@@ -162,28 +176,40 @@ local PRIEST_STRATS = {
                 tips = {}
             },
             ["deathknight_holypaladin"] = {
-                summary = "",
-                tips = {}
+                summary = "Fear Paladin & Sheep DK. Mana Burn & Deep Freeze the Paladin, into a Counterspell and Nova to keep him in place for burns.",
+                tips = {
+                    "After your offensive push on Paladin, run away from the dk while the mage slows him and wait for your fear cooldown as well as the enemy DR's; Then do the Summary again.",
+                    "Purge divine plea if possible.",
+                }
             },
             ["warlock_eleshaman"] = {
-                summary = "",
-                tips = {}
+                summary = "If warlock has a felhunter then rank one frostbolt the Warlock before sheeping Warlock, Fear Ele & dot him, and kill Ele with a deep freeze.",
+                tips = {
+                    "If possible, save counterspell for an important fear or shaman's heal.",
+                }
             },
             ["warlock_restoshaman"] = {
                 summary = "",
                 tips = {}
             },
             ["eleshaman_holypaladin"] = {
-                summary = "",
-                tips = {}
+                summary = "Nova/CS the Paladin into a Sheep while you fear the Shaman. Purge & Kill Shaman, and Deep Freeze him off of the fear.",
+                tips = {
+                    "Cross CC is key or else they can get eachother out of CC. Be ontop of the shaman, but let the Mage Nova/CS before you fear. (Make sure to kill Tremor!)",
+                }
             },
             ["enhanceshaman_hunter"] = {
-                summary = "",
-                tips = {}
+                summary = "CC Shaman & kill hunter",
+                tips = {
+                    "As they're running in, Icy veins and counterspell the Shaman, and try to get a sheep on the Shaman.",
+                    "Use Deep Freezes on hun"
+                }
             },
             ["enhanceshaman_ret"] = {
-                summary = "",
-                tips = {}
+                summary = "Try to live the opener. Spam Sheep Ret and fear Shaman, they'll probably trinket or bubble and go all in.",
+                tips = {
+                    "Eventually after living their cooldowns, you can Sheep the paladin and fear the Shaman and kill the Shaman in a Deep Freeze"
+                }
             }
         },
         ["rogue_discpriest"] = {
@@ -368,7 +394,7 @@ local PRIEST_STRATS = {
                 tips = {}
             },
             ["rogue_shadowpriest"] = {
-                summary = "",
+                summary = "CC Priest & purge kill Rogue.",
                 tips = {}
             },
             ["deathknight_holypaladin"] = {

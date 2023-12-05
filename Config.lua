@@ -4,32 +4,21 @@ local AceConfig = LibStub("AceConfig-3.0");
 local AceConfigDialog = LibStub("AceConfigDialog-3.0");
 local LibDBIcon = LibStub("LibDBIcon-1.0");
 local addon_name = "ArenaCoach";
+local ArenaCoach = _G.LibStub("AceAddon-3.0"):GetAddon(addon_name);
 local frame;
-AC = core.AC;
-core.Config = {};
-Config = core.Config;
-Config.filter = {};
-filter = Config.filter;
+ArenaCoach.filter = {};
+local filter = ArenaCoach.filter;
 filter.bracket = "2v2";
 filter.player_comp = "";
 filter.enemy_comp = "";
 local _, player_class = UnitClass("player");
-local addon_name = "ArenaCoach";
 
-function Config:OpenMinimapConfig()
-    if frame and frame:IsShown() then
-        frame:Hide();
-    else
-        if not frame then
-            frame = Config:CreateCustomConfigFrame();
-        end
-        frame:Show();
-    end
-end
 
-function Config:CreateCustomConfigFrame()
+function ArenaCoach:CreateCustomConfigFrame()
+
     local frame_width, frame_height = 900, 420;
     local f = AceGUI:Create("Frame", "ArenaCoachGUI");
+
 
     f:SetTitle(addon_name);
     f:SetLayout("Flow");
@@ -45,24 +34,36 @@ function Config:CreateCustomConfigFrame()
     bracket_dropdown:SetWidth(72);
     bracket_dropdown:SetCallback("OnValueChanged", function(_, _, bracket)
         filter.bracket = bracket;
-        Config:UpdatePlayerClassDropdowns();
-        Config:ResetDropdowns();
+        self:UpdatePlayerClassDropdowns();
+        self:ResetDropdowns();
     end);
     bracket_dropdown:SetValue("2v2");
     f:AddChild(bracket_dropdown);
 
+
+    local all_comps_allowed_button = AceGUI:Create("CheckBox");
+    all_comps_allowed_button:SetLabel("Show All Comps");
+    all_comps_allowed_button:SetCallback("OnValueChanged", function (_, _, canViewAllComps)
+        self.db.profile.showAllComps = canViewAllComps;
+        self:UpdatePlayerComps();
+    end);
+    all_comps_allowed_button:SetValue(self.db.profile.showAllComps);
+    f:AddChild(all_comps_allowed_button);
+
+
     local player_comp_dropdown = AceGUI:Create("Dropdown");
     player_comp_dropdown:SetLabel("Your Comp");
     local viable_player_comps = core[player_class.."_COMPS"][filter.bracket] or {};
-    player_comp_dropdown:SetList(viable_player_comps);
+    local all_player_comps = core.VIABLE_COMPS[filter.bracket];
+    player_comp_dropdown:SetList(self.db.profile.showAllComps and all_player_comps or viable_player_comps);
     player_comp_dropdown:SetCallback("OnValueChanged", function(_, _, comp)
         filter.player_comp = comp;
-        Config:UpdateSummaryAndTipText();
+        self:UpdateSummaryAndTipText();
     end);
     player_comp_dropdown:SetWidth(220);
     f:AddChild(player_comp_dropdown);
 
-    local vs_label = AceGUI:Create("Label")
+    local vs_label = AceGUI:Create("Label");
     vs_label:SetText("vs");
     vs_label:SetWidth(40);
     vs_label:SetJustifyH("CENTER");
@@ -70,15 +71,14 @@ function Config:CreateCustomConfigFrame()
 
     local enemy_comp_dropdown = AceGUI:Create("Dropdown");
     enemy_comp_dropdown:SetLabel("Enemy Comp");
-    enemy_comp_dropdown:SetList(core.VIABLE_COMPS[filter.bracket]);
+    enemy_comp_dropdown:SetList(core.VIABLE_COMPS[filter.bracket] or {});
     enemy_comp_dropdown:SetCallback("OnValueChanged", function(_, _, comp)
         filter.enemy_comp = comp;
-        Config:UpdateSummaryAndTipText();
-    end);
-    enemy_comp_dropdown:SetWidth(220);
-    f:AddChild(enemy_comp_dropdown);
-
-    function Config:UpdatePlayerClassDropdowns()
+        self:UpdateSummaryAndTipText();
+    end)
+    enemy_comp_dropdown:SetWidth(220)
+    f:AddChild(enemy_comp_dropdown)
+    function ArenaCoach:UpdatePlayerClassDropdowns()
         local player_class_combinations = core[player_class.."_COMPS"][filter.bracket];
         local viable_enemy_comps = core.VIABLE_COMPS[filter.bracket];
         
@@ -99,10 +99,11 @@ function Config:CreateCustomConfigFrame()
     horizontal_group:AddChild(tips_text_label);
     f:AddChild(horizontal_group);
 
-    function Config:UpdateSummaryAndTipText()
+    function ArenaCoach:UpdateSummaryAndTipText()
         if filter.player_comp == "" or filter.enemy_comp == "" then return end
-        local summary = core[player_class .. "_STRATS"][filter.bracket][filter.player_comp][filter.enemy_comp].summary or "";
-        local tips = core[player_class .. "_STRATS"][filter.bracket][filter.player_comp][filter.enemy_comp].tips or {};
+        
+        local summary = core[not self.db.profile.showAllComps and player_class.."_STRATS" or "ALL_STRATS"][filter.bracket][filter.player_comp][filter.enemy_comp].summary or "";
+        local tips = core[not self.db.profile.showAllComps and player_class.."_STRATS" or "ALL_STRATS"][filter.bracket][filter.player_comp][filter.enemy_comp].tips or {};
         local formatted_tips = "";
         local colored_tips_title, colored_summary_title = "|cff33ff99Tips|r\n\n", "|cff33ff99Summary|r\n\n";
         for i, tip in ipairs(tips) do
@@ -119,7 +120,11 @@ function Config:CreateCustomConfigFrame()
         summary_text_label:SetText((summary ~= "" and "|cff33ff99Summary|r\n\n" or colored_summary_title .. "Summary not yet provided.") .. summary);
     end
 
-    function Config:ResetDropdowns()
+    function ArenaCoach:UpdatePlayerComps()
+        player_comp_dropdown:SetList(self.db.profile.showAllComps and all_player_comps or viable_player_comps);
+    end
+
+    function ArenaCoach:ResetDropdowns()
         player_comp_dropdown:SetValue(nil);
         enemy_comp_dropdown:SetValue(nil);
         filter.enemy_comp = "";
@@ -132,7 +137,7 @@ function Config:CreateCustomConfigFrame()
 end
 
 
-function Config:PopulateKnownUnfilledStrats()
+function ArenaCoach:PopulateKnownUnfilledStrats()
     for i, class in ipairs(core.CLASSES) do
         local class_strats = core[class.."_STRATS"];
 
@@ -150,8 +155,8 @@ function Config:PopulateKnownUnfilledStrats()
                 break;
             end
 
-            for bracket, player_comps in pairs(other_class_strats) do
-                for player_comp, enemy_comp_data in pairs(player_comps) do
+            for bracket, player_comp_list in pairs(other_class_strats) do
+                for player_comp, enemy_comp_data in pairs(player_comp_list) do
                     -- check if the player comp exists in the class strat
                     if class_strats[bracket] and class_strats[bracket][player_comp] then
 
@@ -175,8 +180,60 @@ function Config:PopulateKnownUnfilledStrats()
     end
 end
 
+function ArenaCoach:PopulateAllStrats()
+    for i, class in ipairs(core.CLASSES) do
+        local class_strats = core[class.."_STRATS"];
+
+        for bracket, player_comp_list in pairs(class_strats) do
+            for player_comp, enemy_comp_data in pairs(player_comp_list) do
+                if class_strats[bracket] and class_strats[bracket][player_comp] then
+                    
+                    -- loop through the matchups in that comp
+                    for enemy_comp, strat in pairs(enemy_comp_data) do 
+
+                        if  core.ALL_STRATS[bracket] and core.ALL_STRATS[bracket][player_comp] and core.ALL_STRATS[bracket][player_comp][enemy_comp] then
+                            local all_classes_strat = core.ALL_STRATS[bracket][player_comp][enemy_comp];
+
+                            -- check the strat to see how many tips and summaries there are
+                            if #strat.tips > #all_classes_strat.tips or (all_classes_strat.summary == "" and strat.summary ~= "") then
+                                -- override current strat for this particular matchup
+                                all_classes_strat.summary = strat.summary;
+                                all_classes_strat.tips = strat.tips;
+                            end
+                        else 
+                            -- create the nested tables if they don't exist
+                            core.ALL_STRATS[bracket] = core.ALL_STRATS[bracket] or {};
+                            core.ALL_STRATS[bracket][player_comp] = core.ALL_STRATS[bracket][player_comp] or {};
+                            core.ALL_STRATS[bracket][player_comp][enemy_comp] = core.ALL_STRATS[bracket][player_comp][enemy_comp] or {};
+                            
+                            -- assign the values to the new table
+                            core.ALL_STRATS[bracket][player_comp][enemy_comp].summary = strat.summary;
+                            core.ALL_STRATS[bracket][player_comp][enemy_comp].tips = strat.tips;
+                        end
+                    end
+                end
+            end
+        end
+    end
+end
+
+
+function ArenaCoach:OpenMinimapConfig()
+    ArenaCoach:PopulateKnownUnfilledStrats();
+    ArenaCoach:PopulateAllStrats();
+
+    if frame and frame:IsShown() then
+        frame:Hide();
+    else
+        if not frame then
+            frame = ArenaCoach:CreateCustomConfigFrame();
+        end
+        frame:Show();
+    end
+end
+
 
 -- register slash command to open options
 SLASH_ARENACOACH1 = "/arenacoach";
 SLASH_ARENACOACH2 = "/ac";
-SlashCmdList["ARENACOACH"] = Config.OpenMinimapConfig;
+SlashCmdList["ARENACOACH"] = ArenaCoach.OpenMinimapConfig;

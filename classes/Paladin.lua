@@ -418,7 +418,7 @@ local PALADIN_STRATS = {
                 tips = {}
             },
             ["enhanceshaman_ret"] = {
-                summary = "",
+                summary = "Kill Ret",
                 tips = {}
             }
         },
